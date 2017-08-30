@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <title>Resume</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!--My scripts-->
+
+    <script type="text/javascript" src = "{% static 'js/titleAnimation.js' %} "></script>
+    <script type="text/javascript" src = "{% static 'js/scroll.js' %} "></script>
+    <script type="text/javascript" src = "{% static 'js/charts.js' %} "></script>
+    <script type="text/javascript" src = "{% static 'js/charts_languages.js' %} "></script>
+    <script type="text/javascript" src = "{% static 'js/targets_slide.js' %} "></script>
+
+
+    </style>
+  </head>
+  <body>
+    <div id="body">
+      <div class="splash">
+        <div class="counter">
+          <div><h1 id = "nombreTitle">Diego Gutierrez Blanco</h1></div>
+        </div>
+        <p class="tagline">Software Engineer</p>
+
+      </div>
+      <div >
+        <nav class="row navbar navbar-default nav_total" >
+          <div class="container-fluid">
+            <ul class="nav navbar-nav col-lg-12 ul_nav">
+              <li class=" li_nav about" ><a href="#about">About Me</a></li>
+              <li class="li_nav skills"><a href="#skills">Skills</a></li>
+              <li class="li_nav education"><a href="#education">Education</a></li>
+              <li class="li_nav experience"><a href="#">Experience</a></li>
+              <li class="li_nav projects"><a href="#">Projects</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div id="about" class="col-lg-12" >
+        <div class="marco col-lg-12">
+          <div class="mitadContact col-lg-4">
+              <div class="fotoPerfil col-lg-3">
+                  <img id ="imagen_perfil"src="{% static 'images/yo.jpeg' %}" alt="">
+              </div>
+              <div class=" descripcion col-lg-1">
+                High communicative and organizational skills with creative and self-taught skills.
+                Great capacity to expand and develop knowledge, especially in the field of new technologies.
+                <div class="row navbar navbar-default rss_nav_total">
+                  <div class="container-fluid container_nav_rss">
+                    <ul class="nav navbar-nav col-lg-12 rss_Nav">
+                        <li class="li_rss">
+                          <a href="#"><img src="{% static 'images/twitter.png' %}" alt=""></a>
+                        </li>
+                        <li class="li_rss">
+                          <a href="https://www.facebook.com/diego.gutierrezblanco.9"><img src="{% static 'images/facebook-logo.png' %}" alt=""></a>
+                        </li>
+                        <li class="li_rss">
+                          <a href="https://github.com/DiegoMau5"><img src="{% static 'images/github-logo.png' %}" alt=""></a>
+                        </li>
+                        <li class="li_rss">
+                          <a href="{% static 'images/DiegoGutierrezCV.pdf' %}" download="Diego Gutierrez's CV"><img src="{% static 'images/cv-file-interface-symbol.png' %}" alt=""></a>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="mitadAbout col-lg-8">
+              <h3 id="section_title" class="col-lg-3">About Me</h3>
+              <div class="data col-lg-1">Full Name
+                <span>:</span>
+                <span>Diego Gutierrez Blanco</span>
+                <hr>
+              </div>
+
+              <div class="data col-lg-1">City
+                <span>:</span>
+                <span>Madrid</span>
+                <hr>
+            </div>
+              <div class="data col-lg-1">Address
+                <span>:</span>
+                <span>Av. del Mediterraneo 5</span>
+                <hr>
+            </div>
+
+              <div class="data col-lg-1">Email
+                <span>:</span>
+                <span>diego.gblanco94@gmail.com</span>
+                <hr>
+            </div>
+
+              <div class="data col-lg-1">Phone
+                <span>:</span>
+                <span>662159052</span></div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-lg-12" id="skills">
+        <div class="skills_title col-lg-3">
+          <div class="titleSkill">
+            <h3>Skills</h3>
+          </div>
+          <div id="description_skills">
+              <ul id="table_skills">
+                <li>Application Development</li>
+                <hr>
+                <li>Web Development</li>
+                <hr>
+                <li>Data Science</li>
+                <hr>
+              </ul>
+          </div>
+
+        </div>
+        <div class="skills_graphics col-lg-9">
+          <div class="row navbar navbar-default skills_nav_total ">
+            <div class="container-fluid container_nav_skills">
+              <ul class="nav navbar-nav col-lg-12 skills_nav">
+                  <li class ="li_skills" id="languages" >Languages</li>
+                  <li class ="li_skills" id="frameworks" >Frameworks</li>
+                  <li class ="li_skills" id="extras" >Extras</li>
+              </ul>
+              <div class="charts_skills" id = "chart_language">
+                <ul class="lines">
+                    <li class="line l--0">
+                      <span class="line__label title">
+                        Skill level:
+                      </span>
+                    </li>
+                    <li class="line l--25">
+                      <span class="line__label">
+                        The basics
+                      </span>
+                    </li>
+                    <li class="line l--50">
+                      <span class="line__label">
+                        Advanced
+                      </span>
+                    </li>
+                    <li class="line l--75">
+                      <span class="line__label">
+                        Seasoned
+                      </span>
+                    </li>
+                    <li class="line l--100">
+                      <span class="line__label">
+                        Expert
+                      </span>
+                    </li>
+                  </ul>
+                  <div class="charts">
+                     <div class="chart chart--dev">
+                       <span class="chart__title">Development</span>
+                       <ul class="chart--horiz">
+                         <li class="chart__bar" data-skill="80">
+                           <span class="chart__label">
+                             HTML(5) & CSS(3)
+                           </span>
+                         </li>
+                         <li class="chart__bar" data-skill="70">
+                           <span class="chart__label">
+                             SQL
+                           </span>
+                         </li>
+                         <li class="chart__bar" data-skill="70">
+                           <span class="chart__label">
+                             JavaScript
+                           </span>
+                         </li>
+                         <li class="chart__bar" data-skill="50">
+                           <span class="chart__label">
+                             Java
+                           </span>
+                         </li>
+                         <li class="chart__bar" data-skill="60">
+                           <span class="chart__label">
+                             jQuery
+                           </span>
+                         </li>
+                         <li class="chart__bar" data-skill="70">
+                           <span class="chart__label">
+                             Python
+                           </span>
+                         </li>
+                         <li class="chart__bar" data-skill="40">
+                           <span class="chart__label">
+                             C/C++
+                           </span>
+                         </li>
+                         <li class="chart__bar" data-skill="35">
+                           <span class="chart__label">
+                             Swift
+                           </span>
+                         </li>
+                         <li class="chart__bar" data-skill="60">
+                           <span class="chart__label">
+                             PHP
+                           </span>
+                         </li>
+                       </ul>
+                     </div>
+              </div>
+            </div>
+            <div class="charts_skills" id = "chart_framework">
+              <ul class="lines">
+                  <li class="line l--0">
+                    <span class="line__label title">
+                      Skill level:
+                    </span>
+                  </li>
+                  <li class="line l--25">
+                    <span class="line__label">
+                      The basics
+                    </span>
+                  </li>
+                  <li class="line l--50">
+                    <span class="line__label">
+                      Advanced
+                    </span>
+                  </li>
+                  <li class="line l--75">
+                    <span class="line__label">
+                      Seasoned
+                    </span>
+                  </li>
+                  <li class="line l--100">
+                    <span class="line__label">
+                      Expert
+                    </span>
+                  </li>
+                </ul>
+                <div class="charts">
+                   <div class="chart chart--dev">
+                     <span class="chart__title">Platforms</span>
+                     <ul class="chart--horiz">
+                       <li class="chart__bar" data-skill="70">
+                         <span class="chart__label">
+                           Angular JS & Angular 2
+                         </span>
+                       </li>
+                       <li class="chart__bar" data-skill="40">
+                         <span class="chart__label">
+                           Django
+                         </span>
+                       </li>
+                       <li class="chart__bar" data-skill="60">
+                         <span class="chart__label">
+                           Laravel
+                         </span>
+                       </li>
+                       <li class="chart__bar" data-skill="50">
+                         <span class="chart__label">
+                           Drupal
+                         </span>
+                       </li>
+                       <li class="chart__bar" data-skill="40">
+                         <span class="chart__label">
+                           Wordpress
+                         </span>
+                       </li>
+                     </ul>
+                   </div>
+            </div>
+          </div>
+          <div class="charts_skills" id = "chart_extra">
+            <ul class="lines">
+                <li class="line l--0">
+                  <span class="line__label title">
+                    Skill level:
+                  </span>
+                </li>
+                <li class="line l--25">
+                  <span class="line__label">
+                    The basics
+                  </span>
+                </li>
+                <li class="line l--50">
+                  <span class="line__label">
+                    Advanced
+                  </span>
+                </li>
+                <li class="line l--75">
+                  <span class="line__label">
+                    Seasoned
+                  </span>
+                </li>
+                <li class="line l--100">
+                  <span class="line__label">
+                    Expert
+                  </span>
+                </li>
+              </ul>
+              <div class="charts">
+                 <div class="chart chart--dev">
+                   <span class="chart__title"></span>
+                   <ul class="chart--horiz">
+                     <li class="chart__bar" data-skill="50">
+                       <span class="chart__label">
+                         Sketch
+                       </span>
+                     </li>
+                     <li class="chart__bar" data-skill="40">
+                       <span class="chart__label">
+                         Photoshop
+                       </span>
+                     </li>
+                     <li class="chart__bar" data-skill="80">
+                       <span class="chart__label">
+                         Web Crawling
+                       </span>
+                     </li>
+
+                   </ul>
+                 </div>
+          </div>
+        </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      </div>
+      <div class="col-lg-12" id="education">
+        <div class="row navbar navbar-default col-lg-6 education_nav_total ">
+          <div class="container-fluid container_nav_education">
+            <ul class="nav navbar-nav col-lg-12 education_nav">
+                <li class ="li_education" id="academic_education" >Academic</li>
+                <li class ="li_education" id="language_education" >language</li>
+            </ul>
+          </div>
+        </div>
+          <div class="col-lg-6" id="div_education">
+            <div class="col-lg-6 div_academic">
+              <div class="col-lg-6 square_academic" id="square_1">
+                  <img class ="imagen_square"src="{% static 'images/politecnicalogo.png' %}" alt="">
+                  <h5 class="text_square_academic">Grado en Ingeniería del Software</h5>
+                  <p>Escuela Técnica Superior de Ingeniería de Sistemas Informáticos </p>
+                  <p>2012-2017</p>
+              </div>
+              <div class="col-lg-6 square_academic" id="square_2">
+                  <img class ="imagen_square"src="{% static 'images/dioce.jpg' %}" alt="">
+                  <h5 class="text_square_academic">Título en secundaria y Bachillerato</h5>
+                  <p>Asunción Nuestra Señora Colegio Diocesano </p>
+                  <p>2006-2012</p>
+              </div>
+            </div>
+      </div>
+      <div class="col-lg-6" id="education_languages">
+        <div class="col-lg-6 div_languages">
+          <div class="container_charts_languages">
+            <ul class="graphs stats-container centered biggie">
+              <li class="animated" data-provide="circular" data-fill-color="#4CB8C4" data-percent="true" data-initial-value="80" data-max-value="100" data-label="B2" data-title="English" data-dates="Writing & Speaking" style="width: 272px; height: 272px;">
+              </li>
+
+              <li class="animated" data-provide="circular" data-fill-color="#4CB8C4" data-percent="true" data-initial-value="25" data-max-value="100" data-label="B1" data-title="French" data-dates="Writing & Speaking" style="width: 272px; height: 272px;"></li>
+            </ul>
+            <div id="englishTitle">
+              <a href="{% static 'images/english.pdf' %}" download="Diego Gutierrez's CV"><img src="{% static 'images/downloadbutton.png' %}" alt=""></a>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <div class="col-lg-12" id="experience">
+      <div id="title_experience">
+        <h2>Work Experience</h2>
+        <hr>
+        <div class="targets_experience col-lg-12">
+          <div class = "col-lg-1" id="arrow_back">
+              <img src="{% static 'images/back.png' %}" alt="back">
+          </div>
+          <div class="target_div col-lg-10" id="target_0">
+              <h3>Web Front-end designer, Web Crawler</h3>
+              <hr>
+              <h4>Everis Spain</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="target_div col-lg-10" id="target_1">
+              <h3>Web Frontend and Backend</h3>
+              <hr>
+              <h4>CITSEM(Indra)</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="target_div col-lg-10" id="target_2">
+              <h3>Tecnology Teacher</h3>
+              <hr>
+              <h4>Spanish Telefonica</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class = "col-lg-1" id="arrow_next">
+                <img src="{% static 'images/next.png' %}" alt="next">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
